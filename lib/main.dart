@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
     //Cela permettra à notre application d'être en plein écran 
     //et de visualiser le contenu tout en haut de nos pages.
 
-    return const MaterialApp(
+    return const MaterialApp( //represente la totalité de mon application
       debugShowCheckedModeBanner: false, //pour supprimer la bannière de débogage.
       title: 'Gamestore',
-      // home: HomePage(),
+      home: Scaffold(), //scaffold represent une seul page
     );
   }
 }
