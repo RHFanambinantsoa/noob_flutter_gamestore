@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:noob_flutter_gamestore/pages/home/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp( //represente la totalité de mon application
       debugShowCheckedModeBanner: false, //pour supprimer la bannière de débogage.
       title: 'Gamestore',
-      home: Scaffold(), //scaffold represent une seul page
+      home: HomePage(), 
     );
   }
 }
