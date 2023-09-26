@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noob_flutter_gamestore/pages/home/widgets/header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -30,7 +31,11 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            Container()
+            const Column(
+              children: [
+                HeaderSection(),
+              ],
+            )
           ],
           )
       ),
