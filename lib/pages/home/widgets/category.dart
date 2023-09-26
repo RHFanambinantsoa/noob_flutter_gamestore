@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noob_flutter_gamestore/pages/home/widgets/popular.dart';
 
 class CategorySection extends StatelessWidget {
   CategorySection({super.key});
@@ -56,9 +57,9 @@ class CategorySection extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: categories[index]['color'] as Color),
+                        color: categories[index]['color'] as Color), //cast 
                     child: Icon(
-                      categories[index]['icon'] as IconData,
+                      categories[index]['icon'] as IconData,// mila castena
                       color: Colors.white,
                       size: 40,
                     ),
@@ -78,6 +79,18 @@ class CategorySection extends StatelessWidget {
               itemCount: categories.length, //isan'ilay hoaffichena
             ),
           ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            width: 410,
+            child: Text(
+              'Popular game',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          PopularGame()
         ],
       ),
     );
