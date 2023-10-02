@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noob_flutter_gamestore/models/game.dart';
+import 'package:noob_flutter_gamestore/pages/detail/detail.dart';
 
 class PopularGame extends StatelessWidget {
   PopularGame({super.key});
@@ -19,7 +20,11 @@ class PopularGame extends StatelessWidget {
           ),
           scrollDirection: Axis.horizontal,
           itemBuilder: ((context, index) => GestureDetector( //widget clickable izay childny
-            onTap: (() => print("ito e")),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => DetailPage(games[index]),
+              ),
+            ),
             child: Card(
               elevation: 5,
               shape: RoundedRectangleBorder(
